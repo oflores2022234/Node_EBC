@@ -47,7 +47,7 @@ export const addUser = async (req, res) => {
             host: 'smtp.gmail.com',
             port: 587,
             auth: {
-                user: "echamale018@gmail.com",
+                user: "kinalgrupo@gmail.com",
                 pass: process.env.PASS
             }
         };
