@@ -2,7 +2,7 @@
 
 import { dbConnection } from "./mongo.js"
 import express from 'express'
-//import cors from 'cors'
+import cors from 'cors'
 import helmet from "helmet" 
 import morgan from "morgan"
 import userRoutes from "../src/user/user.routes.js"
@@ -39,7 +39,7 @@ class Server{
     middlewares(){
         this.app.use(express.urlencoded({ extended: true }))
         this.app.use(express.json())
-        //this.app.use(cors())
+        this.app.use(cors())
         this.app.use(helmet())
         this.app.use(morgan('dev'))
     }
